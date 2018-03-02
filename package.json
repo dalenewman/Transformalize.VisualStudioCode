@@ -2,7 +2,7 @@
     "name": "transformalize",
     "displayName": "Transformalize",
     "description": "Runs Transformalize arrangements in the integrated terminal.",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "publisher": "DaleNewman",
     "engines": {
         "vscode": "^1.20.0"
@@ -11,10 +11,10 @@
         "Other"
     ],
     "activationEvents": [
-		"onCommand:extension.run",
-		"onCommand:extension.schema",
-		"onCommand:extension.init",
-		"onCommand:extension.schedule"
+		"onCommand:tfl.run",
+		"onCommand:tfl.schema",
+		"onCommand:tfl.init",
+		"onCommand:tfl.schedule"
 	],
     "main": "./out/extension",
     "contributes": {
@@ -31,19 +31,19 @@
 		},
 		"commands": [
 			{
-				"command": "extension.run",
+				"command": "tfl.run",
 				"title": "TFL: run"
 			},
 			{
-				"command": "extension.schema",
+				"command": "tfl.schema",
 				"title": "TFL: schema"
 			},
 			{
-				"command": "extension.init",
+				"command": "tfl.init",
 				"title": "TFL: init"
 			},
 			{
-				"command": "extension.schedule",
+				"command": "tfl.schedule",
 				"title": "TFL: schedule"
 			}
 		]
@@ -61,10 +61,10 @@
         "tslint": "^5.8.0",
         "@types/node": "^7.0.43",
         "@types/mocha": "^2.2.42"
+	},
+	"repository": {
+        "type": "git",
+        "url": "https://github.com/dalenewman/Transformalize.VisualStudioCode.git"
     },
-	"__metadata": {
-		"id": "74198ee9-8f18-4536-8f72-2261981215cd",
-		"publisherId": "f51dc914-aafe-4b03-a5d9-d1424f08b66a",
-		"publisherDisplayName": "Dale Newman"
-	}    
+    "homepage": "https://github.com/dalenewman/Transformalize.VisualStudioCode/blob/master/README.md"
 }

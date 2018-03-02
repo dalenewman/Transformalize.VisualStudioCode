@@ -15,22 +15,22 @@ export function activate(context: vscode.ExtensionContext) {
     // Now provide the implementation of the command with  registerCommand
     // The commandId parameter must match the command field in package.json
 
-    let tflRun = vscode.commands.registerCommand('extension.run', () => {
+    let tflRun = vscode.commands.registerCommand('tfl.run', () => {
         // The code you place here will be executed every time your command is executed
         run("default", null);
     });
 
-    let tflSchema = vscode.commands.registerCommand('extension.schema', () => {
+    let tflSchema = vscode.commands.registerCommand('tfl.schema', () => {
         // The code you place here will be executed every time your command is executed
         run("check", null);
     });
 
-    let tflInit = vscode.commands.registerCommand('extension.init', () => {
+    let tflInit = vscode.commands.registerCommand('tfl.init', () => {
         // The code you place here will be executed every time your command is executed
         run("init", null);
     });
 
-    let tflSchedule = vscode.commands.registerCommand('extension.schedule', () => {
+    let tflSchedule = vscode.commands.registerCommand('tfl.schedule', () => {
         // The code you place here will be executed every time your command is executed
         run("default", "internal");
     });
