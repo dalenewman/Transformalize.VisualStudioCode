@@ -13,7 +13,7 @@ This extension features four commands that pass your file (arrangement) to Trans
 
 Use ``CTRL-SHIFT-P`` to find and execute the commands.
 
-![x](image/bogus-provider.gif)
+![demo](https://raw.githubusercontent.com/dalenewman/Transformalize.VisualStudioCode/master/image/bogus-provider.gif)
 
 This extension adds four `tfl` commands:
 
