@@ -1,24 +1,23 @@
-'use strict';
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
-import { Client } from '_debugger';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
 
-    // Use the console to output diagnostic information (console.log) and errors (console.error)
-    // This line of code will only be executed once when your extension is activated
-    let terminalStack = [];
+	// Use the console to output diagnostic information (console.log) and errors (console.error)
+	// This line of code will only be executed once when your extension is activated
+	let terminalStack: any[] = [];	
+	console.log('transformalize is active');
 
-    // The command has been defined in the package.json file
-    // Now provide the implementation of the command with  registerCommand
-    // The commandId parameter must match the command field in package.json
+	// The command has been defined in the package.json file
+	// Now provide the implementation of the command with registerCommand
+	// The commandId parameter must match the command field in package.json
 
     let tflRun = vscode.commands.registerCommand('tfl.run', () => {
         run("default", null);
-    });
+	});
 
     let tflSchema = vscode.commands.registerCommand('tfl.schema', () => {
         run("check", null);
@@ -33,17 +32,13 @@ export function activate(context: vscode.ExtensionContext) {
     });
 
     function getTerminal(){
-        if (terminalStack) {
-            if (terminalStack.length === 0) {
-                terminalStack.push(vscode.window.createTerminal(`tfl terminal #${terminalStack.length + 1}`));
-            }
-        } else {
-            let terminalStack = [];
+        if (terminalStack.length === 0) {
+            terminalStack.push(vscode.window.createTerminal(`Transformalize`));
         }
         return terminalStack[terminalStack.length - 1];
     }
 
-    function run(mode, schedule) {
+    function run(mode:string, schedule:any) {
         var editor = vscode.window.activeTextEditor;
         if (!editor) {
             console.error("No open text editor!");
@@ -83,5 +78,4 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 // this method is called when your extension is deactivated
-export function deactivate() {
-}
+export function deactivate() {}

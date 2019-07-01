@@ -3,16 +3,20 @@
         "prefix": "cfg",
         "scope": "xml",
         "body": [
-          "<cfg name=\"${1:name}\">",
-          "\t<parameters/>",
-          "\t<connections>",
-          "\t\t<add name=\"input\" provider=\"internal\" />",
-          "\t\t<add name=\"output\" provider=\"internal\" />",
-          "\t</connections>",
-          "\t<entities>",
-          "\t\t<add name=\"${2:name}\" />",
-          "\t</entities>",
-          "</cfg>"
+            "<cfg name=\"${1:process}\">",
+            "\t<parameters/>",
+            "\t<connections>",
+            "\t\t<add name=\"input\" provider=\"internal\" />",
+            "\t\t<add name=\"output\" provider=\"internal\" />",
+            "\t</connections>",
+            "\t<entities>",
+            "\t\t<add name=\"${2:entity}\">",
+            "\t\t\t<fields>",
+            "\t\t\t\t<add name=\"${3:field}\" />",
+            "\t\t\t</fields>",
+            "\t\t</add>",
+            "\t</entities>",
+            "</cfg>"
         ],
         "description": "TFL template"
     }

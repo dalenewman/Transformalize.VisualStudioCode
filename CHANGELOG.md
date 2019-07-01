@@ -1,4 +1,4 @@
-# Changelog
+# Change Log
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
@@ -18,3 +18,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 ## [0.0.4] - 2018-03-02
 ### Changed
 - Changed prefix of commands from *extension* to *tfl*.
+
+## [0.0.5] - 2018-03-08
+### Added
+- `cfg` snippet to xml language that creates a basic transformalize arrangement.
+
+## [0.0.6] - 2019-07-01
+### Changed
+- Updated VS Code extension template and dependencies
