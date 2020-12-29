@@ -46,18 +46,19 @@ export function activate(context: vscode.ExtensionContext) {
         }
 
         var file = editor.document.fileName;
-        var folder = file.substring(0, file.lastIndexOf("\\") + 1);
+        var slash = file.indexOf("/") >= 0 ? "/" : "\\";
+        var folder = file.substring(0, file.lastIndexOf(slash) + 1);
         var cfg = vscode.workspace.getConfiguration('tfl');
 
         var terminal = getTerminal();
         terminal.show();
         terminal.sendText(`cd "${folder}"`);
-        terminal.sendText('cls');       
+        terminal.sendText(slash === "/" ? 'clear' : 'cls');
         
-        var tfl = "tfl.exe";
+        var tfl = "tfl";
         if (cfg && cfg.path !== undefined && cfg.path !== "") {
-            if (cfg.path[cfg.path.length - 1] !== "\\") {
-                tfl = cfg.path + "\\" + tfl;
+            if (cfg.path[cfg.path.length - 1] !== slash) {
+                tfl = cfg.path + slash + tfl;
             } else {
                 tfl = cfg.path + tfl;
             }

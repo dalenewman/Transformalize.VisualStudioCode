@@ -26,3 +26,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 ## [0.0.6] - 2019-07-01
 ### Changed
 - Updated VS Code extension template and dependencies
+
+## [0.0.7] - 2020-12-28
+### Changed
+- Get ready for cross-platform Transformalize
