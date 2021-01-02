@@ -2,7 +2,7 @@
 	"name": "transformalize",
 	"displayName": "Transformalize",
 	"description": "Runs Transformalize arrangements.",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"publisher": "DaleNewman",
 	"engines": {
 		"vscode": "^1.52.0"

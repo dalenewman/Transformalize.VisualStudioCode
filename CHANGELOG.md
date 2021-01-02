@@ -30,3 +30,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 ## [0.0.7] - 2020-12-28
 ### Changed
 - Get ready for cross-platform Transformalize
+
+## [0.0.8] - 2020-12-28
+### Changed
+- Change tfl:schema mode from "check" to "schema"

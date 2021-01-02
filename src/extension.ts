@@ -20,7 +20,7 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 
     let tflSchema = vscode.commands.registerCommand('tfl.schema', () => {
-        run("check", null);
+        run("schema", null);
     });
 
     let tflInit = vscode.commands.registerCommand('tfl.init', () => {
