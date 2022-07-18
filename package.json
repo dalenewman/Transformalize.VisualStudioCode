@@ -2,7 +2,7 @@
 	"name": "transformalize",
 	"displayName": "Transformalize",
 	"description": "Runs Transformalize arrangements.",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"publisher": "DaleNewman",
 	"engines": {
 		"vscode": "^1.52.0"
@@ -24,8 +24,8 @@
 			"properties": {
 				"tfl.path": {
 					"type": "string",
-					"default": "",
-					"description": "The path to tfl.exe"
+					"default": "docker run -v \"$(pwd)\":\"$(pwd)\" --rm --platform linux/amd64 dalenewman/transformalize.cli:latest",
+					"description": "The full path to tfl.exe or Docker run command."
 				}
 			}
 		},

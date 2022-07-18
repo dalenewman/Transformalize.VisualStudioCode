@@ -57,11 +57,7 @@ export function activate(context: vscode.ExtensionContext) {
         
         var tfl = "tfl";
         if (cfg && cfg.path !== undefined && cfg.path !== "") {
-            if (cfg.path[cfg.path.length - 1] !== slash) {
-                tfl = cfg.path + slash + tfl;
-            } else {
-                tfl = cfg.path + tfl;
-            }
+            tfl = cfg.path;
         }
 
         if (schedule !== null) {

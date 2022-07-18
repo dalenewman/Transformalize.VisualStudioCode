@@ -17,11 +17,10 @@ Use ``CTRL-SHIFT-P`` to find and execute the commands.
 
 ## Requirements
 
-You must download and decompress the [latest release](https://github.com/dalenewman/Transformalize/releases) of Transformalize. Decompress it, and put it somewhere on your `PATH` or set the `tfl.path` setting.
+Download and decompress the [latest release](https://github.com/dalenewman/Transformalize/releases) of Transformalize. Decompress it, set it as executable, and put it on your `PATH`or set the `tfl.path` setting.  If you have Docker, you can run the Transformalize container (see below).
 
 ## Extension Settings
 
 This extension contributes the following settings:
 
-* `tfl.path`: full path to `tfl.exe`
-
+* `tfl.path`: the full path _including_ the Transformalize binary (e.g. `tfl` or `tfl.exe`).  Or, you may set this to run Transformalize from a Docker container (e.g. `docker run -v "$(pwd)":"$(pwd)" --rm --platform linux/amd64 dalenewman/transformalize.cli:0.10.2`). 
